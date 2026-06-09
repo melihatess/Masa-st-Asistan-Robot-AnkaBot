@@ -61,10 +61,10 @@ bool merhabaCalindiMi = false;
 bool acilisSesiBekleniyor = false;
 
 // ===== AĞ VE SUNUCU AYARLARI =====
-const char* ssid     = "SUPERONLINE_Wi-Fi_6Y77";
-const char* password = "QzZzz26kTzZ4";
+const char* ssid     = "Kendi İnternetiniz";
+const char* password = "Kendi İnternetinizin Şifresi";
 String weatherUrl = "http://api.open-meteo.com/v1/forecast?latitude=39.92&longitude=32.85&current_weather=true";
-String sunucuIP   = "http://192.168.1.3:5000/hamle-al";
+String sunucuIP   = "http://ip adresiniz: ve atadığınız port/hamle-al";
 
 // ===== DURUM DEĞİŞKENLERİ =====
 int ekranDurumu = 1;
