@@ -27,12 +27,23 @@ Diğer: Jumper kablolar, dirençler, breadboard ve özel tasarım 3D Baskı Göv
 
 💻 Yazılım Mimarisi ve GereksinimlerProje, merkezi olmayan (Edge-to-Server) bir mimari ile çalışır. ESP32 sensör okumaları ve motor kontrollerinden sorumluyken, ağır oyun zekâsı (Minimax algoritması) Python sunucusunda işlenir.  
 1. ESP32 Tarafı (C++)Platform: Arduino IDEGerekli Kütüphaneler: Adafruit_GFX, Adafruit_ST7735, WiFi, HTTPClient, DHT, ESP32ServoKurulum: AnkaBot__1_.ino dosyasını Arduino IDE ile açın. ssid ve password değişkenlerine kendi Wi-Fi bilgilerinizi girin. sunucuIP değişkenini Python sunucusunun çalışacağı bilgisayarın yerel IP adresi (örn: [http://192.168.1.](http://192.168.1.)x:5000/hamle-al) olarak güncelleyin ve ESP32'ye yükleyin.
-2. 2. Bilgisayar Tarafı (Python)Platform: Python 3.xGerekli Kütüphaneler: flask, pygame, requestsKurulum:Gerekli paketleri terminal üzerinden yükleyin:pip install flask pygame requests    2. `ankabot_beyin.py` dosyasındaki `ESP32_IP` değişkenini, AnkaBot'un ekranında yazan IP adresi ile güncelleyin.
+2. Bilgisayar Tarafı (Python)
+Platform: Python 3.x
+
+Gerekli Kütüphaneler: flask, pygame, requests
+
+Kurulum:
+
+Gerekli paketleri terminal üzerinden yükleyin:
+
+pip install flask pygame requests
+
+    2. `ankabot_beyin.py` dosyasındaki `ESP32_IP` değişkenini, AnkaBot'un ekranında yazan IP adresi ile güncelleyin.
     3. Dosyayı çalıştırın:
        ```bash
 python ankabot_beyin.py
-4. Pygame penceresi açıldığında sistem iletişime hazır hale gelecektir.
 
+4. Pygame penceresi açıldığında sistem iletişime hazır hale gelecektir.
 
 🕹️ Kullanım Senaryosu
 Sisteme güç verildiğinde AnkaBot Wi-Fi ağına bağlanır ve gözleri açık şekilde bekleme moduna geçer.Robotun üst kısmında bulunan Dokunmatik Sensöre (TTP223) her basıldığında menüler arası (Saat -> Hava Durumu -> Oda İçi Sıcaklık -> Sensörler -> Kronometre -> Pomodoro -> XOX) geçiş yapılır.  
